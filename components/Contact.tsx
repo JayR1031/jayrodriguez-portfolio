@@ -91,12 +91,13 @@ export default function Contact() {
       className="min-h-screen flex items-center justify-center py-20 px-6"
     >
       <div className="container mx-auto max-w-4xl">
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-gradient contact-element">
-              Let&apos;s Connect
-            </h2>
-            <p className="text-center text-gray-400 mb-16 text-lg contact-element">
-              Open to internships and opportunities in Software Engineering, ML, and AI Engineering.
-            </p>
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-gradient contact-element">
+          Let&apos;s Connect
+        </h2>
+        <p className="text-center text-gray-400 mb-16 text-lg contact-element">
+          Open to internships and opportunities in Software Engineering, ML, and
+          AI Engineering.
+        </p>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
