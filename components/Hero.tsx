@@ -302,15 +302,17 @@ export default function Hero() {
                      font-semibold hover:scale-105 transform transition-all duration-300 
                      shadow-lg shadow-primary-500/50 flex items-center gap-2"
           >
-            Get In Touch
+            Let&apos;s Connect
           </a>
           <a
-            href="#projects"
+            href="https://github.com/JayR1031"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 glass-effect rounded-full font-semibold 
                      hover:scale-105 transform transition-all duration-300 
                      border border-primary-500/50 flex items-center gap-2"
           >
-            View My Work
+            See My Code
           </a>
           <a
             href="/Graduate Student.pdf"
@@ -320,7 +322,7 @@ export default function Hero() {
                      border border-primary-500/50 flex items-center gap-2"
           >
             <Download size={20} />
-            Resume
+            View Resume
           </a>
         </div>
 
