@@ -254,7 +254,7 @@ export default function Hero() {
       <div className="container mx-auto text-center">
         <h1
           ref={titleRef}
-          className="text-6xl md:text-8xl font-bold mb-6"
+          className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6"
           style={{
             lineHeight: "1.25",
             paddingTop: "1rem",
@@ -272,6 +272,10 @@ export default function Hero() {
               paddingBottom: "0.75rem",
               overflow: "visible",
               minHeight: "1.5em",
+              whiteSpace: "nowrap",
+              wordBreak: "keep-all",
+              hyphens: "none",
+              fontSize: "clamp(2.25rem, 9vw, 6rem)",
             }}
           >
             Jay Rodriguez
