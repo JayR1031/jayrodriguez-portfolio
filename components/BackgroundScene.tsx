@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { Stars } from '@react-three/drei'
 import * as THREE from 'three'
 import { InteractiveSphere, InteractiveCube } from './InteractiveElements'
+import { AINeuralNetwork, AIDataFlow, AINeuralLayers } from './AIAnimations'
 
 function ParticleField() {
   const particles = 5000
@@ -98,10 +99,18 @@ export default function BackgroundScene() {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <pointLight position={[-10, -10, -10]} intensity={0.5} color="#667eea" />
+        <directionalLight position={[5, 5, 5]} intensity={0.5} />
+        
         <ParticleField />
         <FloatingGeometry />
         <InteractiveSphere />
         <InteractiveCube />
+        
+        {/* AI-themed animations */}
+        <AINeuralNetwork />
+        <AIDataFlow />
+        <AINeuralLayers />
+        
         <Stars radius={100} depth={50} count={1000} factor={4} fade speed={1} />
       </Canvas>
     </div>

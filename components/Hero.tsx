@@ -31,16 +31,29 @@ export default function Hero() {
       const nameSpan = titleRef.current.children[0] as HTMLElement;
       if (nameSpan) {
         const text = nameSpan.textContent || "";
+        // Store original HTML to restore if needed
+        const originalHTML = nameSpan.innerHTML;
+
         nameSpan.innerHTML = text
           .split("")
           .map((char, i) =>
             char === " "
               ? " "
-              : `<span class="inline-block" style="opacity: 0">${char}</span>`
+              : `<span class="inline-block" style="opacity: 0; transform: translateY(50px) rotateX(-90deg);">${char}</span>`
           )
           .join("");
 
         const chars = nameSpan.querySelectorAll("span");
+
+        // Safety fallback: ensure visibility even if animation fails
+        const safetyTimeout = setTimeout(() => {
+          chars.forEach((char) => {
+            (char as HTMLElement).style.opacity = "1";
+            (char as HTMLElement).style.transform = "";
+          });
+        }, 2000);
+
+        // Ensure visibility after animation
         gsap.fromTo(
           chars,
           {
@@ -55,6 +68,14 @@ export default function Hero() {
             duration: 0.8,
             stagger: 0.05,
             ease: "back.out(1.7)",
+            onComplete: () => {
+              clearTimeout(safetyTimeout);
+              // Force visibility on all characters
+              chars.forEach((char) => {
+                (char as HTMLElement).style.opacity = "1";
+                (char as HTMLElement).style.transform = "";
+              });
+            },
           }
         );
       }
@@ -250,6 +271,7 @@ export default function Hero() {
               paddingTop: "0.75rem",
               paddingBottom: "0.75rem",
               overflow: "visible",
+              minHeight: "1.5em",
             }}
           >
             Jay Rodriguez

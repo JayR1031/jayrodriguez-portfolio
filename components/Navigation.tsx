@@ -67,9 +67,16 @@ export default function Navigation() {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="text-2xl font-bold text-gradient">
-          JR
-        </div>
+        <a 
+          href="#home" 
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick('#home');
+          }}
+          className="text-xl md:text-2xl font-bold text-gradient hover:scale-105 transform transition-all duration-300"
+        >
+          Jay Rodriguez
+        </a>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">

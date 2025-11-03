@@ -26,7 +26,7 @@ const skillCategories = [
   },
   {
     title: 'Backend & Cloud',
-    skills: ['Node.js', 'Flask', 'AWS', 'Docker', 'Firebase', 'PostgreSQL', 'MySQL', 'Redis'],
+    skills: ['Node.js', 'Django', 'Flask', 'AWS', 'Azure', 'Docker', 'Firebase', 'PostgreSQL', 'MySQL', 'Redis'],
     color: 'from-orange-500 to-red-500',
   },
   {

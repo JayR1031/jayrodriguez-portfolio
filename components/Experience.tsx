@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { GraduationCap, Briefcase, Award } from 'lucide-react'
+import { GraduationCap, Briefcase, Award, Users } from 'lucide-react'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -20,6 +20,16 @@ const experiences = [
     color: 'from-blue-500 to-cyan-500',
   },
   {
+    type: 'leadership',
+    icon: Users,
+    title: 'Miami Chapter Lead',
+    organization: 'The AI Collective',
+    period: 'Present',
+    description: 'Leading the Miami chapter of The AI Collective, a non-profit community uniting 100,000+ pioneers exploring the frontier of AI. Organizing events, workshops, and discussions to drive collective progress in AI.',
+    color: 'from-indigo-500 to-purple-500',
+    link: 'https://www.aicollective.com/',
+  },
+  {
     type: 'research',
     icon: Award,
     title: 'AI Safety Researcher',
@@ -34,7 +44,7 @@ const experiences = [
     title: 'Software Engineer',
     organization: 'Various Projects',
     period: 'Present',
-    description: 'Building scalable applications, working with cloud infrastructure, and developing ML-powered solutions.',
+    description: 'Building scalable applications with Django and Flask, deploying solutions on Azure cloud infrastructure, and developing ML-powered solutions. Experienced with Azure services including Azure Functions, Azure DevOps, and Azure Machine Learning.',
     color: 'from-green-500 to-emerald-500',
   },
 ]
@@ -109,7 +119,18 @@ export default function Experience() {
                     </div>
                     
                     <p className="text-primary-400 text-lg mb-3">
-                      {exp.organization}
+                      {exp.link ? (
+                        <a 
+                          href={exp.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          {exp.organization}
+                        </a>
+                      ) : (
+                        exp.organization
+                      )}
                     </p>
                     
                     <p className="text-gray-300 leading-relaxed">
