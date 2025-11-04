@@ -22,32 +22,48 @@ function playClickSound() {
     const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
     const now = audioCtx.currentTime;
 
-    // Primary crisp tone (high frequency for tech feel)
+    // Crisp splash effect - multiple frequencies for water-like texture
+    // Main splash tone (high frequency that drops quickly)
     const osc1 = audioCtx.createOscillator();
     const gain1 = audioCtx.createGain();
     osc1.type = "sine";
-    osc1.frequency.setValueAtTime(1200, now);
-    osc1.frequency.exponentialRampToValueAtTime(800, now + 0.08);
+    osc1.frequency.setValueAtTime(1800, now);
+    osc1.frequency.exponentialRampToValueAtTime(600, now + 0.12);
     gain1.gain.setValueAtTime(0, now);
-    gain1.gain.linearRampToValueAtTime(0.15, now + 0.001);
-    gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+    gain1.gain.linearRampToValueAtTime(0.18, now + 0.002);
+    gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
     osc1.connect(gain1);
     gain1.connect(audioCtx.destination);
     osc1.start(now);
-    osc1.stop(now + 0.08);
+    osc1.stop(now + 0.12);
 
-    // Subtle harmonic for depth
+    // Secondary splash layer (mid-high frequency)
     const osc2 = audioCtx.createOscillator();
     const gain2 = audioCtx.createGain();
     osc2.type = "triangle";
-    osc2.frequency.setValueAtTime(2400, now);
+    osc2.frequency.setValueAtTime(1400, now);
+    osc2.frequency.exponentialRampToValueAtTime(400, now + 0.1);
     gain2.gain.setValueAtTime(0, now);
-    gain2.gain.linearRampToValueAtTime(0.05, now + 0.001);
-    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+    gain2.gain.linearRampToValueAtTime(0.12, now + 0.001);
+    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
     osc2.connect(gain2);
     gain2.connect(audioCtx.destination);
     osc2.start(now);
-    osc2.stop(now + 0.06);
+    osc2.stop(now + 0.1);
+
+    // High-frequency sparkle (crisp texture)
+    const osc3 = audioCtx.createOscillator();
+    const gain3 = audioCtx.createGain();
+    osc3.type = "sine";
+    osc3.frequency.setValueAtTime(3200, now);
+    osc3.frequency.exponentialRampToValueAtTime(2000, now + 0.08);
+    gain3.gain.setValueAtTime(0, now);
+    gain3.gain.linearRampToValueAtTime(0.08, now + 0.001);
+    gain3.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+    osc3.connect(gain3);
+    gain3.connect(audioCtx.destination);
+    osc3.start(now);
+    osc3.stop(now + 0.08);
   } catch (_) {
     /* ignore */
   }
