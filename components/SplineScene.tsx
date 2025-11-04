@@ -27,10 +27,10 @@ export default function SplineScene({ src = "https://my.spline.design/particleai
 
   return (
     <div
-      className="absolute inset-0 top-24 pointer-events-none z-0 flex items-center justify-center"
-      style={{ height }}
+      className="absolute left-1/2 top-24 -translate-x-1/2 pointer-events-none z-0 flex items-center justify-center"
+      style={{ height, width: '100%', maxWidth: '1200px' }}
     >
-      <div className="relative w-full max-w-4xl mx-auto h-full flex items-center justify-center overflow-visible">
+      <div className="relative w-full h-full flex items-center justify-center overflow-visible" style={{ margin: '0 auto' }}>
         <iframe
           src={embedSrc}
           title="Spline 3D Scene"
@@ -38,6 +38,9 @@ export default function SplineScene({ src = "https://my.spline.design/particleai
           className="w-full h-full"
           style={{
             border: 0,
+            margin: 0,
+            padding: 0,
+            display: 'block',
             opacity: 0.9,
             filter: "saturate(0.9) brightness(0.95)",
             mixBlendMode: "normal",
