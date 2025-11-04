@@ -48,7 +48,7 @@ export default function SplineScene({ src = "https://my.spline.design/particleai
               pointerEvents: "none",
               backgroundColor: "transparent",
               position: 'relative',
-              transform: 'translateX(-5%)', // Left shift to compensate for Spline's internal offset
+              transform: 'translateX(-10%)', // Left shift to compensate for Spline's internal offset
             }}
             allow="autoplay; fullscreen; xr-spatial-tracking"
           />
