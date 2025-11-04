@@ -90,30 +90,6 @@ export default function FeedbackProvider({ children }: { children: React.ReactNo
   return (
     <FeedbackContext.Provider value={{ enabled, setEnabled, trigger }}>
       {children}
-
-      {/* Toggle button bottom-right */}
-      <div className="fixed bottom-5 right-5 z-[60]">
-        <button
-          aria-label="Toggle sound and haptics"
-          onClick={() => setEnabled((v) => !v)}
-          className="pointer-events-auto w-10 h-10 rounded-full glass-effect border border-white/10 flex items-center justify-center text-xs"
-        >
-          {enabled ? "FX" : "FX"}
-        </button>
-        <AnimatePresence>
-          {enabled && (
-            <motion.div
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 0.9, y: 0 }}
-              exit={{ opacity: 0, y: 6 }}
-              transition={{ duration: 0.2 }}
-              className="mt-2 text-[11px] text-gray-300 text-center"
-            >
-              Feedback on
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
     </FeedbackContext.Provider>
   );
 }
