@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Reveal from './Reveal'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -78,10 +79,12 @@ export default function Skills() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <div
+            <Reveal
               key={category.title}
               className="skill-card glass-card p-6 rounded-xl hover:scale-105 
                        transform transition-all duration-300 group"
+              as="div"
+              delay={index * 0.05}
             >
               <h3 className="text-2xl font-bold mb-4 text-gradient-2">
                 {category.title}
@@ -98,7 +101,7 @@ export default function Skills() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

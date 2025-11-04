@@ -3,6 +3,8 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { motion } from 'framer-motion'
+import Reveal from './Reveal'
 import { Github, ExternalLink } from 'lucide-react'
 
 if (typeof window !== 'undefined') {
@@ -99,15 +101,17 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={project.title}
               className="project-card glass-card p-6 rounded-xl hover:scale-105 
                        transform transition-all duration-300 group relative overflow-hidden"
+              whileHover={{ y: -6 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.color} 
                             rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity`} />
               
-              <div className="relative z-10">
+              <Reveal as="div" className="relative z-10" delay={index * 0.05}>
                 <h3 className="text-2xl font-bold mb-3 text-gradient-2">
                   {project.title}
                 </h3>
@@ -152,8 +156,8 @@ export default function Projects() {
                     <span className="text-sm">View</span>
                   </a>
                 </div>
-              </div>
-            </div>
+              </Reveal>
+            </motion.div>
           ))}
         </div>
 

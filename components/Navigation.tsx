@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
 
 const navItems = [
@@ -81,14 +82,16 @@ export default function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, index) => (
-            <button
+            <motion.button
               key={item.name}
               onClick={() => handleNavClick(item.href)}
               className="relative group text-sm font-medium hover:text-primary-400 transition-colors"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
             >
               <span className="relative z-10">{item.name}</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-primary-600 group-hover:w-full transition-all duration-300" />
-            </button>
+            </motion.button>
           ))}
         </div>
 

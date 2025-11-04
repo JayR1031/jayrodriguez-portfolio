@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GraduationCap, MapPin, Languages, Award } from "lucide-react";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -93,7 +94,7 @@ export default function About() {
           About Me
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <Reveal as="div" className="grid md:grid-cols-2 gap-12 items-center">
           <div ref={contentRef} className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
               I&apos;m an aspiring{" "}
@@ -214,7 +215,7 @@ export default function About() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
 
         <div className="mt-16 text-center">
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">

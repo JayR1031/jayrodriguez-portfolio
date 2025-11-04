@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Github, Linkedin, Twitter, Mail, Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -252,7 +253,7 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center relative pt-20 px-6"
     >
       <div className="container mx-auto text-center">
-        <h1
+        <motion.h1
           ref={titleRef}
           className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6"
           style={{
@@ -262,8 +263,11 @@ export default function Hero() {
             overflow: "visible",
             height: "auto",
           }}
+          initial="hidden"
+          animate="visible"
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }}
         >
-          <span
+          <motion.span
             className="block text-gradient"
             style={{
               display: "inline-block",
@@ -277,16 +281,31 @@ export default function Hero() {
               hyphens: "none",
               fontSize: "clamp(2.25rem, 9vw, 6rem)",
             }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.7, ease: "easeOut" }}
           >
             Jay Rodriguez
-          </span>
-          <span className="block text-4xl md:text-6xl mt-4 text-gray-300 leading-tight">
+          </motion.span>
+          <motion.span
+            className="block text-4xl md:text-6xl mt-4 text-gray-300 leading-tight"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.25, duration: 0.7, ease: "easeOut" }}
+          >
             AI Safety Researcher
-          </span>
-          <span className="block text-3xl md:text-5xl mt-2 text-gray-400 leading-tight">
+          </motion.span>
+          <motion.span
+            className="block text-3xl md:text-5xl mt-2 text-gray-400 leading-tight"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
+          >
             & ML Engineer
-          </span>
-        </h1>
+          </motion.span>
+        </motion.h1>
 
         <p
           ref={subtitleRef}

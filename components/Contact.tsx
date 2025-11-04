@@ -12,6 +12,7 @@ import {
   Code2,
   MessageCircle,
 } from "lucide-react";
+import Reveal from "./Reveal";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -99,7 +100,7 @@ export default function Contact() {
           AI Engineering.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <Reveal as="div" className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="contact-element">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
@@ -312,7 +313,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
