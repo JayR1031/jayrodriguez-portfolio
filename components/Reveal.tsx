@@ -7,17 +7,29 @@ type RevealProps = {
   children: React.ReactNode;
   delay?: number;
   y?: number;
-  as?: keyof JSX.IntrinsicElements;
+  as?: MotionTag;
   className?: string;
 };
+
+type MotionTag = "div" | "section" | "article" | "header" | "footer" | "main" | "span";
 
 const variants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
+const componentsMap: Record<MotionTag, any> = {
+  div: motion.div,
+  section: motion.section,
+  article: motion.article,
+  header: motion.header,
+  footer: motion.footer,
+  main: motion.main,
+  span: motion.span,
+};
+
 export default function Reveal({ children, delay = 0, y = 24, as = "div", className }: RevealProps) {
-  const Component: any = motion[as as any] || motion.div;
+  const Component = componentsMap[as] ?? motion.div;
   return (
     <Component
       className={className}
