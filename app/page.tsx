@@ -10,7 +10,7 @@ import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
 import BackgroundScene from "@/components/BackgroundScene";
 import InteractiveCursor from "@/components/InteractiveCursor";
-import AICoreScene from "@/components/AICoreScene";
+import SplineScene from "@/components/SplineScene";
 
 export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null);
@@ -19,7 +19,7 @@ export default function Home() {
     <main ref={mainRef} className="relative min-h-screen">
       <InteractiveCursor />
       <BackgroundScene />
-      <AICoreScene />
+      <SplineScene />
       <div className="relative z-10">
         <Navigation />
         <Hero />
