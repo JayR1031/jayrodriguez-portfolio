@@ -46,6 +46,7 @@ export default function Navigation() {
 
   const handleNavClick = (href: string) => {
     if (typeof window !== 'undefined') {
+      if ('vibrate' in navigator) navigator.vibrate(8)
       const element = document.querySelector(href)
       if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -98,7 +99,7 @@ export default function Navigation() {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden z-50"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => { if ('vibrate' in navigator) navigator.vibrate(8); setIsOpen(!isOpen) }}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

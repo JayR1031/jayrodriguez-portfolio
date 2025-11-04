@@ -319,34 +319,43 @@ export default function Hero() {
           ref={buttonRef}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <a
+          <motion.a
             href="#contact"
             className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full 
                      font-semibold hover:scale-105 transform transition-all duration-300 
-                     shadow-lg shadow-primary-500/50 flex items-center gap-2"
+                     shadow-lg shadow-primary-500/50 flex items-center gap-2 ring-0"
+            whileTap={{ scale: 0.96 }}
+            whileHover={{ boxShadow: "0 0 24px rgba(99,102,241,0.45)" }}
+            onClick={() => { if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10) }}
           >
             Let&apos;s Connect
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://github.com/JayR1031"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 glass-effect rounded-full font-semibold 
                      hover:scale-105 transform transition-all duration-300 
                      border border-primary-500/50 flex items-center gap-2"
+            whileTap={{ scale: 0.96 }}
+            whileHover={{ boxShadow: "0 0 20px rgba(99,102,241,0.35)" }}
+            onClick={() => { if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10) }}
           >
             See My Code
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="/Graduate Student.pdf"
             download="Jay_Rodriguez_Resume.pdf"
             className="px-8 py-4 glass-effect rounded-full font-semibold 
                      hover:scale-105 transform transition-all duration-300 
                      border border-primary-500/50 flex items-center gap-2"
+            whileTap={{ scale: 0.96 }}
+            whileHover={{ boxShadow: "0 0 20px rgba(99,102,241,0.35)" }}
+            onClick={() => { if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10) }}
           >
             <Download size={20} />
             View Resume
-          </a>
+          </motion.a>
         </div>
 
         <div ref={socialRef} className="flex justify-center gap-6 flex-wrap">

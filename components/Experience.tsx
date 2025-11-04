@@ -124,7 +124,9 @@ export default function Experience() {
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             return (
-              <Reveal as="div" delay={index * 0.05}
+              <Reveal
+                as="div"
+                delay={index * 0.05}
                 key={exp.title}
                 className="experience-item glass-card p-8 rounded-2xl 
                          hover:scale-[1.02] transform transition-all duration-300 group"
