@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
+import { useFeedback } from '@/components/FeedbackProvider'
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -18,6 +19,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const navRef = useRef<HTMLElement>(null)
+  const { trigger } = useFeedback()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +48,7 @@ export default function Navigation() {
 
   const handleNavClick = (href: string) => {
     if (typeof window !== 'undefined') {
-      if ('vibrate' in navigator) navigator.vibrate(8)
+      trigger()
       const element = document.querySelector(href)
       if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -99,7 +101,7 @@ export default function Navigation() {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden z-50"
-          onClick={() => { if ('vibrate' in navigator) navigator.vibrate(8); setIsOpen(!isOpen) }}
+          onClick={() => { trigger(); setIsOpen(!isOpen) }}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

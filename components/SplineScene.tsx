@@ -22,7 +22,8 @@ export default function SplineScene({ src = "https://my.spline.design/particleai
 
   if (isReduced) return null;
 
-  const embedSrc = src.includes("?") ? `${src}` : `${src}?controls=0`;
+  const base = src.split("?")[0];
+  const embedSrc = `${base}?controls=0&autoplay=1&transparent=1`;
 
   return (
     <div

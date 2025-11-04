@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Github, Linkedin, Twitter, Mail, Download } from "lucide-react";
 import { motion } from "framer-motion";
+import { useFeedback } from "@/components/FeedbackProvider";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +24,7 @@ export default function Hero() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
   const socialRef = useRef<HTMLDivElement>(null);
+  const { trigger } = useFeedback();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -326,7 +328,7 @@ export default function Hero() {
                      shadow-lg shadow-primary-500/50 flex items-center gap-2 ring-0"
             whileTap={{ scale: 0.96 }}
             whileHover={{ boxShadow: "0 0 24px rgba(99,102,241,0.45)" }}
-            onClick={() => { if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10) }}
+            onClick={() => trigger()}
           >
             Let&apos;s Connect
           </motion.a>
@@ -339,7 +341,7 @@ export default function Hero() {
                      border border-primary-500/50 flex items-center gap-2"
             whileTap={{ scale: 0.96 }}
             whileHover={{ boxShadow: "0 0 20px rgba(99,102,241,0.35)" }}
-            onClick={() => { if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10) }}
+            onClick={() => trigger()}
           >
             See My Code
           </motion.a>
@@ -351,7 +353,7 @@ export default function Hero() {
                      border border-primary-500/50 flex items-center gap-2"
             whileTap={{ scale: 0.96 }}
             whileHover={{ boxShadow: "0 0 20px rgba(99,102,241,0.35)" }}
-            onClick={() => { if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10) }}
+            onClick={() => trigger()}
           >
             <Download size={20} />
             View Resume
