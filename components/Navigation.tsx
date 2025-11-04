@@ -108,16 +108,22 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 glass-effect transform transition-transform duration-300 md:hidden z-40 ${
+          className={`fixed top-0 right-0 h-full w-64 transform transition-transform duration-300 md:hidden z-40 ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
+          style={{
+            background: 'rgba(10, 10, 15, 0.95)',
+            backdropFilter: 'blur(20px)',
+            borderLeft: '1px solid rgba(255, 255, 255, 0.15)',
+            boxShadow: '-4px 0 24px rgba(0, 0, 0, 0.5)',
+          }}
         >
           <div className="flex flex-col pt-20 px-6 space-y-6">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-left text-lg font-medium hover:text-primary-400 transition-colors py-2"
+                className="text-left text-lg font-medium text-white hover:text-primary-400 transition-colors py-2"
               >
                 {item.name}
               </button>

@@ -9,7 +9,6 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
 import BackgroundScene from "@/components/BackgroundScene";
-import InteractiveCursor from "@/components/InteractiveCursor";
 import SplineScene from "@/components/SplineScene";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
 
   return (
     <main ref={mainRef} className="relative min-h-screen">
-      <InteractiveCursor />
       <BackgroundScene />
       <SplineScene />
       <div className="relative z-10">

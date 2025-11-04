@@ -26,14 +26,6 @@ body {
   background: #0a0a0a;
   color: #ffffff;
   overflow-x: hidden;
-  cursor: none; /* Hide default cursor for custom cursor */
-}
-
-/* Hide custom cursor on mobile/touch devices */
-@media (hover: none) and (pointer: coarse) {
-  body {
-    cursor: auto;
-  }
 }
 
 @layer utilities {
