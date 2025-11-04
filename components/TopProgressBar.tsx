@@ -28,7 +28,7 @@ export default function TopProgressBar() {
             initial={{ width: 0, opacity: 0.9 }}
             animate={{ width: "100%", opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.9, ease: "easeInOut" }}
+            transition={{ duration: 0.85, ease: "easeInOut" }}
           />
         )}
       </AnimatePresence>
