@@ -21,6 +21,16 @@ const skillCategories = [
     color: 'from-blue-500 to-cyan-500',
   },
   {
+    title: 'Tools & Others',
+    skills: ['Git', 'GitHub Actions', 'Jira', 'Notion', 'Postman', 'Vim', 'VS Code'],
+    color: 'from-indigo-500 to-purple-500',
+  },
+  {
+    title: 'Mathematics & Theory',
+    skills: ['Linear Algebra', 'Multivariate Calculus', 'Probability Theory', 'Graph Theory'],
+    color: 'from-teal-500 to-blue-500',
+  },
+  {
     title: 'Frontend',
     skills: ['React', 'Next.js', 'Tailwind CSS', 'Material UI', 'Figma'],
     color: 'from-green-500 to-emerald-500',
@@ -29,11 +39,6 @@ const skillCategories = [
     title: 'Backend & Cloud',
     skills: ['Node.js', 'Django', 'Flask', 'AWS', 'Azure', 'Docker', 'Firebase', 'PostgreSQL', 'MySQL', 'Redis'],
     color: 'from-orange-500 to-red-500',
-  },
-  {
-    title: 'Tools & Others',
-    skills: ['Git', 'GitHub Actions', 'Jira', 'Notion', 'Postman', 'Vim', 'VS Code'],
-    color: 'from-indigo-500 to-purple-500',
   },
 ]
 

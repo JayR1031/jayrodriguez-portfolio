@@ -22,6 +22,17 @@ const experiences = [
     color: "from-blue-500 to-cyan-500",
   },
   {
+    type: "education",
+    icon: Award,
+    title: "Mathematics for Machine Learning Specialization",
+    organization: "Imperial College London",
+    period: "Completed",
+    description:
+      "Comprehensive 3-course specialization covering the prerequisite mathematics for applications in data science and machine learning. Topics include Linear Algebra, Multivariate Calculus, Probability Theory, and Graph Theory.",
+    color: "from-teal-500 to-blue-500",
+    link: "https://www.coursera.org/specializations/mathematics-machine-learning",
+  },
+  {
     type: "leadership",
     icon: Users,
     title: "Student Advisory Board Member",
