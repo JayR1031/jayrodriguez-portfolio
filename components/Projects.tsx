@@ -13,6 +13,22 @@ if (typeof window !== "undefined") {
 
 const projects = [
   {
+    title: "Multi-PDF RAG System",
+    description:
+      "Privacy-preserving document intelligence system that lets users query across multiple PDFs without sending data to external APIs. Built with local LLM inference, vector embeddings, and retrieval-augmented generation.",
+    tech: ["Python", "RAG", "LLMs", "Vector Search", "Privacy"],
+    github: "https://github.com/JayR1031/multi-pdf-rag",
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
+    title: "Merit Flow",
+    description:
+      "IBM Hackathon project — AI-powered workflow automation system built with IBM Watson Orchestrate. Designed to streamline merit-based processes using agentic AI orchestration.",
+    tech: ["Python", "IBM Watson Orchestrate", "Agentic AI", "Hackathon"],
+    github: "https://github.com/JayR1031/merit-flow",
+    color: "from-slate-500 to-blue-500",
+  },
+  {
     title: "Cloud Infrastructure Docker",
     description:
       "Docker containerization and cloud infrastructure deployment project. Focus on scalable microservices architecture.",

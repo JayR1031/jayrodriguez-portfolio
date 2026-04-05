@@ -304,8 +304,8 @@ export default function Hero() {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Northeastern University Grad Student | Machine Learning, Deep Learning
-          & Computer Vision Enthusiast
+          Building AI systems at the intersection of NLP, RL, and real-world
+          impact
         </p>
 
         <div

@@ -18,8 +18,28 @@ const experiences = [
     organization: "Northeastern University",
     period: "Present",
     description:
-      "Pursuing advanced studies in Computer Science with focus on AI Safety, Machine Learning, and Deep Learning.",
+      "Pursuing advanced studies in Computer Science with focus on Machine Learning, NLP, and AI Engineering.",
     color: "from-blue-500 to-cyan-500",
+  },
+  {
+    type: "education",
+    icon: Briefcase,
+    title: "Participant",
+    organization: "Google GEAR Program",
+    period: "Present",
+    description:
+      "Selected for Google's Explore, Aspire, Rise program — a career development and learning initiative for emerging tech talent.",
+    color: "from-red-500 to-orange-500",
+  },
+  {
+    type: "education",
+    icon: Award,
+    title: "Applicant",
+    organization: "GFSD Fellowship",
+    period: "In Review",
+    description:
+      "Applied to the Graduate Fellowships for STEM Development (GFSD), an employer-sponsored fellowship providing research funding and summer internships for graduate STEM students.",
+    color: "from-violet-500 to-purple-600",
   },
   {
     type: "education",
