@@ -296,16 +296,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ delay: 0.25, duration: 0.7, ease: "easeOut" }}
           >
-            AI Safety Researcher
-          </motion.span>
-          <motion.span
-            className="block text-3xl md:text-5xl mt-2 text-gray-400 leading-tight"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
-          >
-            & ML Engineer
+            ML Engineer & NLP Researcher | Northeastern MS CS
           </motion.span>
         </motion.h1>
 

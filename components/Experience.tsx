@@ -26,7 +26,7 @@ const experiences = [
     icon: Award,
     title: "Mathematics for Machine Learning Specialization",
     organization: "Imperial College London",
-    period: "Completed",
+    period: "In Progress",
     description:
       "Comprehensive 3-course specialization covering the prerequisite mathematics for applications in data science and machine learning. Topics include Linear Algebra, Multivariate Calculus, Probability Theory, and Graph Theory.",
     color: "from-teal-500 to-blue-500",
@@ -68,11 +68,11 @@ const experiences = [
   {
     type: "research",
     icon: Award,
-    title: "AI Safety Researcher",
+    title: "ML & NLP Researcher",
     organization: "Independent Research",
     period: "Present",
     description:
-      "Researching AI safety, alignment, and making AI systems more reliable and aligned with human values.",
+      "Independent research in machine learning and natural language processing: robust models, evaluation, and reliable NLP systems.",
     color: "from-purple-500 to-pink-500",
   },
   {
