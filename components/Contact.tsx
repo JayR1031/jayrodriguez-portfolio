@@ -3,15 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  Mail,
-  Github,
-  Linkedin,
-  Twitter,
-  Send,
-  Code2,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
 import Reveal from "./Reveal";
 
 if (typeof window !== "undefined") {
@@ -62,13 +54,6 @@ export default function Contact() {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  // Dev.to icon component
-  const DevToIcon = ({ className }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-.52 0-.45-.22-.87-.61-1.15zm8.76 0c-.16-.18-.46-.23-.84-.23h-.48l.01 2.44.04 2.45.56-.02c.4 0 .63-.07.83-.26.26-.24.26-.36.26-.52 0-.43-.21-.86-.38-1.16zM19.67 1c-.74.01-1.48.1-2.18.29-.95.3-1.7.84-2.2 1.55-.48.69-.73 1.54-.73 2.38v.03c0 .52.07 1.03.22 1.53.03.09.05.17.08.24h.02c1.14-.56 2.54-.73 3.88-.73h.03c.85 0 1.7.12 2.46.35.93.29 1.7.84 2.2 1.55.5.71.73 1.55.73 2.38 0 .52-.07 1.04-.22 1.54-.03.09-.05.17-.08.24h-.02c-.03-.01-.06-.02-.1-.02-.75-.01-1.49-.1-2.19-.29-.95-.3-1.7-.84-2.2-1.55-.48-.69-.73-1.54-.73-2.38v-.03c0-.52.07-1.03.22-1.53.03-.09.05-.17.08-.24h.02c1.14.56 2.54.73 3.88.73h.03c.85 0 1.7-.12 2.46-.35.93-.29 1.7-.84 2.2-1.55.5-.71.73-1.55.73-2.38 0-.52-.07-1.04-.22-1.54-.03-.09-.05-.17-.08-.24h.02c-.03.01-.06.02-.1.02zm-4.7 14.23c0 .5-.05.99-.15 1.47-.13.64-.35 1.26-.66 1.82-.32.58-.74 1.07-1.24 1.45-.51.39-1.11.66-1.74.79-.63.14-1.28.2-1.94.18-.66.02-1.31-.04-1.94-.18-.63-.13-1.23-.4-1.74-.79-.5-.38-.92-.87-1.24-1.45-.31-.56-.53-1.18-.66-1.82-.1-.48-.15-.97-.15-1.47 0-.5.05-.99.15-1.47.13-.64.35-1.26.66-1.82.32-.58.74-1.07 1.24-1.45.51-.39 1.11-.66 1.74-.79.63-.14 1.28-.2 1.94-.18.66-.02 1.31.04 1.94.18.63.13 1.23.4 1.74.79.5.38.92.87 1.24 1.45.31.56.53 1.18.66 1.82.1.48.15.97.15 1.47z" />
-    </svg>
-  );
-
   const socialLinks = [
     { icon: Github, href: "https://github.com/JayR1031", label: "GitHub" },
     {
@@ -81,7 +66,6 @@ export default function Contact() {
       href: "https://x.com/jayrodriguez87",
       label: "X (Twitter)",
     },
-    { icon: DevToIcon, href: "https://dev.to/jay1031", label: "Dev.to" },
     { icon: Mail, href: "mailto:jayalexander1127@gmail.com", label: "Email" },
   ];
 
@@ -96,8 +80,8 @@ export default function Contact() {
           Let&apos;s Connect
         </h2>
         <p className="text-center text-gray-400 mb-16 text-lg contact-element">
-          Open to internships and opportunities in Software Engineering, ML, and
-          AI Engineering.
+          Open to ML engineer and research engineer roles in LLM evaluation and
+          post-training. Let&apos;s talk.
         </p>
 
         <Reveal as="div" className="grid md:grid-cols-2 gap-12">
@@ -258,33 +242,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
-              <div className="glass-card p-4 rounded-lg">
-                <div className="flex items-center gap-3">
-                  <DevToIcon className="w-5 h-5 text-primary-400" />
-                  <div>
-                    <p className="text-sm text-gray-400">Dev.to</p>
-                    <a
-                      href="https://dev.to/jay1031"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-400 hover:text-primary-300 transition-colors"
-                    >
-                      @jay1031
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="glass-card p-4 rounded-lg">
-                <div className="flex items-center gap-3">
-                  <MessageCircle className="w-5 h-5 text-primary-400" />
-                  <div>
-                    <p className="text-sm text-gray-400">Signal</p>
-                    <span className="text-primary-400">jalexander.91</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div>
@@ -303,11 +260,7 @@ export default function Contact() {
                              hover:border-primary-500 border border-transparent group"
                     aria-label={label}
                   >
-                    {Icon === DevToIcon ? (
-                      <DevToIcon className="w-5 h-5 group-hover:text-primary-400 transition-colors" />
-                    ) : (
-                      <Icon className="w-5 h-5 group-hover:text-primary-400 transition-colors" />
-                    )}
+                    <Icon className="w-5 h-5 group-hover:text-primary-400 transition-colors" />
                   </a>
                 ))}
               </div>

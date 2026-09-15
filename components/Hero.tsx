@@ -11,13 +11,6 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// Dev.to icon component
-const DevToIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-.52 0-.45-.22-.87-.61-1.15zm8.76 0c-.16-.18-.46-.23-.84-.23h-.48l.01 2.44.04 2.45.56-.02c.4 0 .63-.07.83-.26.26-.24.26-.36.26-.52 0-.43-.21-.86-.38-1.16zM19.67 1c-.74.01-1.48.1-2.18.29-.95.3-1.7.84-2.2 1.55-.48.69-.73 1.54-.73 2.38v.03c0 .52.07 1.03.22 1.53.03.09.05.17.08.24h.02c1.14-.56 2.54-.73 3.88-.73h.03c.85 0 1.7.12 2.46.35.93.29 1.7.84 2.2 1.55.5.71.73 1.55.73 2.38 0 .52-.07 1.04-.22 1.54-.03.09-.05.17-.08.24h-.02c-.03-.01-.06-.02-.1-.02-.75-.01-1.49-.1-2.19-.29-.95-.3-1.7-.84-2.2-1.55-.48-.69-.73-1.54-.73-2.38v-.03c0-.52.07-1.03.22-1.53.03-.09.05-.17.08-.24h.02c1.14.56 2.54.73 3.88.73h.03c.85 0 1.7-.12 2.46-.35.93-.29 1.7-.84 2.2-1.55.5-.71.73-1.55.73-2.38 0-.52-.07-1.04-.22-1.54-.03-.09-.05-.17-.08-.24h.02c-.03.01-.06.02-.1.02zm-4.7 14.23c0 .5-.05.99-.15 1.47-.13.64-.35 1.26-.66 1.82-.32.58-.74 1.07-1.24 1.45-.51.39-1.11.66-1.74.79-.63.14-1.28.2-1.94.18-.66.02-1.31-.04-1.94-.18-.63-.13-1.23-.4-1.74-.79-.5-.38-.92-.87-1.24-1.45-.31-.56-.53-1.18-.66-1.82-.1-.48-.15-.97-.15-1.47 0-.5.05-.99.15-1.47.13-.64.35-1.26.66-1.82.32-.58.74-1.07 1.24-1.45.51-.39 1.11-.66 1.74-.79.63-.14 1.28-.2 1.94-.18.66-.02 1.31.04 1.94.18.63.13 1.23.4 1.74.79.5.38.92.87 1.24 1.45.31.56.53 1.18.66 1.82.1.48.15.97.15 1.47z" />
-  </svg>
-);
-
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -244,7 +237,6 @@ export default function Hero() {
       href: "https://x.com/jayrodriguez87",
       label: "X (Twitter)",
     },
-    { icon: DevToIcon, href: "https://dev.to/jay1031", label: "Dev.to" },
     { icon: Mail, href: "mailto:jayalexander1127@gmail.com", label: "Email" },
   ];
 
@@ -296,7 +288,8 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ delay: 0.25, duration: 0.7, ease: "easeOut" }}
           >
-            ML Engineer & NLP Researcher | Northeastern MS CS
+            Building and evaluating LLM systems for regulated, multilingual
+            domains.
           </motion.span>
         </motion.h1>
 
@@ -304,8 +297,8 @@ export default function Hero() {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Building AI systems at the intersection of NLP, RL, and real-world
-          impact
+          ML Engineer · Founder, Puente AI · AI Engineer @ diGenius AI · MS CS @
+          Northeastern
         </p>
 
         <div
@@ -363,11 +356,7 @@ export default function Hero() {
                        hover:border-primary-500 border border-transparent group"
               aria-label={label}
             >
-              {Icon === DevToIcon ? (
-                <DevToIcon className="w-6 h-6 group-hover:text-primary-400 transition-colors" />
-              ) : (
-                <Icon className="w-6 h-6 group-hover:text-primary-400 transition-colors" />
-              )}
+              <Icon className="w-6 h-6 group-hover:text-primary-400 transition-colors" />
             </a>
           ))}
         </div>
