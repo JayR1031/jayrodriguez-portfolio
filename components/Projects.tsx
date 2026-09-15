@@ -13,22 +13,22 @@ if (typeof window !== "undefined") {
 
 const projects = [
   {
-    title: "Puente AI — Trade-Compliance RAG (deployed)",
+    title: "Puente AI: Trade-Compliance RAG (deployed)",
     description:
-      "Deployed retrieval-augmented generation system answering trade-compliance questions for the US–Latin America corridor. Live testbed for cross-lingual LLM compliance evaluation.",
+      "Deployed retrieval-augmented generation system answering trade-compliance questions for the US-Latin America corridor. Live testbed for cross-lingual LLM compliance evaluation.",
     tech: ["Python", "RAG", "LanceDB", "Google Cloud Run", "LLM Evaluation"],
     link: "https://puenteai.ai",
     color: "from-cyan-500 to-blue-600",
   },
   {
-    title: "diGenius AI — Enterprise AI Platform",
+    title: "diGenius AI: Enterprise AI Platform",
     description:
       "Zero-to-one enterprise AI monorepo (Portal, Buying, Brain, Cash Recon) with RAG pipelines over 3,000+ corporate records on LangChain and Azure AI Foundry; 500+ automated deployments; CI/CD security gates with Trivy and Gitleaks.",
     tech: ["Python", "TypeScript", "LangChain", "Azure AI Foundry", "CI/CD"],
     color: "from-green-500 to-emerald-500",
   },
   {
-    title: "PrivaSense MD — Privacy-First Medical Assistant",
+    title: "PrivaSense MD: Privacy-First Medical Assistant",
     description:
       "Led frontend and cloud architecture on a 3-person team: Next.js UI, FastAPI backend, and VaultGemma (differentially private LLM) inference on ECS Fargate across 2 AZs, with PHI masking before inference, encrypted RDS PostgreSQL, Cognito auth, and Terraform-managed infrastructure.",
     tech: ["Next.js", "FastAPI", "AWS", "Terraform", "Differential Privacy"],

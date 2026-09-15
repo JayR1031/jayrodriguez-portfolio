@@ -6,13 +6,13 @@ import FeedbackProvider from '@/components/FeedbackProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Jay Rodriguez — ML Engineer | LLM systems for regulated domains',
-  description: 'Jay Rodriguez — ML Engineer | LLM systems for regulated domains',
+  title: 'Jay Rodriguez | ML Engineer | LLM systems for regulated domains',
+  description: 'Jay Rodriguez | ML Engineer | LLM systems for regulated domains',
   keywords: ['Jay Rodriguez', 'Machine Learning', 'LLM', 'NLP', 'ML Engineer', 'Northeastern'],
   authors: [{ name: 'Jay Rodriguez' }],
   openGraph: {
-    title: 'Jay Rodriguez — ML Engineer | LLM systems for regulated domains',
-    description: 'Jay Rodriguez — ML Engineer | LLM systems for regulated domains',
+    title: 'Jay Rodriguez | ML Engineer | LLM systems for regulated domains',
+    description: 'Jay Rodriguez | ML Engineer | LLM systems for regulated domains',
     type: 'website',
   },
 }
