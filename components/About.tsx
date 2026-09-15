@@ -100,13 +100,13 @@ export default function About() {
               I build and evaluate LLM systems for industries where a wrong
               answer has consequences: customs and trade compliance, healthcare,
               cross-border payments. At diGenius AI I shipped a zero-to-one
-              enterprise AI platform for multi-unit restaurant operators —
+              enterprise AI platform for multi-unit restaurant operators:
               retrieval-augmented generation over 3,000+ corporate records on
               LangChain and Azure AI Foundry, four production apps, 500+
               automated deployments, and CI/CD security gates that block
               vulnerable dependencies before release. At Puente AI, which I
               founded, I run a deployed RAG system (LanceDB, Google Cloud Run)
-              answering trade-compliance questions for the US–Latin America
+              answering trade-compliance questions for the US-Latin America
               corridor. It doubles as the testbed for my research question: how
               LLM compliance behavior degrades across English, Spanish, and
               Portuguese in regulated settings, which I&apos;m pursuing this
@@ -117,7 +117,7 @@ export default function About() {
               I came to machine learning from the customer&apos;s side. A degree
               in supply-chain management, then six years selling
               compliance-driven products to restaurants, law firms, healthcare
-              providers, and financial institutions — the people whose problems
+              providers, and financial institutions, the people whose problems
               I now build for. That&apos;s why my research question exists.
             </p>
 
