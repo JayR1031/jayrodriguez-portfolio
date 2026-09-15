@@ -97,54 +97,28 @@ export default function About() {
         <Reveal as="div" className="grid md:grid-cols-2 gap-12 items-center">
           <div ref={contentRef} className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              I&apos;m an aspiring{" "}
-              <span className="text-primary-400 font-semibold">
-                ML/AI engineer
-              </span>{" "}
-              driven by the challenge of building robust, scalable systems that
-              solve real-world problems. As a graduate student in Computer
-              Science at{" "}
-              <span className="text-primary-400 font-semibold">
-                Northeastern University
-              </span>
-              , I&apos;m actively bridging the gap between academic depth and
-              hands-on expertise — currently honing my skills in database
-              design, optimization, and backend architecture.
+              I build and evaluate LLM systems for industries where a wrong
+              answer has consequences: customs and trade compliance, healthcare,
+              cross-border payments. At diGenius AI I shipped a zero-to-one
+              enterprise AI platform for multi-unit restaurant operators —
+              retrieval-augmented generation over 3,000+ corporate records on
+              LangChain and Azure AI Foundry, four production apps, 500+
+              automated deployments, and CI/CD security gates that block
+              vulnerable dependencies before release. At Puente AI, which I
+              founded, I run a deployed RAG system (LanceDB, Google Cloud Run)
+              answering trade-compliance questions for the US–Latin America
+              corridor. It doubles as the testbed for my research question: how
+              LLM compliance behavior degrades across English, Spanish, and
+              Portuguese in regulated settings, which I&apos;m pursuing this
+              fall through the Algoverse AI Research program.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              I thrive at the intersection of{" "}
-              <span className="text-primary-400 font-semibold">
-                machine learning
-              </span>{" "}
-              and
-              <span className="text-primary-400 font-semibold">
-                {" "}
-                infrastructure
-              </span>
-              , where performance meets precision. Whether it&apos;s deploying
-              intelligent workflows or architecting data pipelines, I bring a
-              systems-level mindset and a passion for continuous learning. My
-              goal? To engineer solutions that are not only technically sound
-              but socially impactful.
-            </p>
-
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Beyond my technical work, I serve as the{" "}
-              <span className="text-primary-400 font-semibold">
-                Miami Chapter Lead
-              </span>{" "}
-              for{" "}
-              <a
-                href="https://www.aicollective.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-400 font-semibold hover:underline"
-              >
-                The AI Collective
-              </a>
-              , where I help unite AI pioneers to exchange insights and drive
-              collective progress in the field.
+              I came to machine learning from the customer&apos;s side. A degree
+              in supply-chain management, then six years selling
+              compliance-driven products to restaurants, law firms, healthcare
+              providers, and financial institutions — the people whose problems
+              I now build for. That&apos;s why my research question exists.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-8">
@@ -219,23 +193,8 @@ export default function About() {
 
         <div className="mt-16 text-center">
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Currently open to{" "}
-            <span className="text-primary-400 font-semibold">internships</span>{" "}
-            and opportunities in{" "}
-            <span className="text-primary-400 font-semibold">
-              Software Engineering
-            </span>
-            ,
-            <span className="text-primary-400 font-semibold">
-              {" "}
-              Machine Learning
-            </span>
-            , and
-            <span className="text-primary-400 font-semibold">
-              {" "}
-              AI Engineering
-            </span>
-            .
+            Open to ML engineer and research engineer roles in LLM evaluation
+            and post-training. Let&apos;s talk.
           </p>
         </div>
       </div>

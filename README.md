@@ -1,6 +1,6 @@
 # Jay Rodriguez - Personal Portfolio
 
-A stunning, modern portfolio website showcasing my work in AI Safety Research, Machine Learning, and Software Engineering.
+A modern portfolio website showcasing work in machine learning and LLM systems for regulated domains.
 
 ## 🚀 Features
 

@@ -12,98 +12,95 @@ if (typeof window !== "undefined") {
 
 const experiences = [
   {
+    type: "work",
+    icon: Briefcase,
+    title: "AI Engineer",
+    organization: "diGenius AI",
+    period: "",
+    description: "",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    type: "work",
+    icon: Briefcase,
+    title: "Founder & CEO",
+    organization: "Puente AI",
+    period: "",
+    description: "",
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
     type: "education",
     icon: GraduationCap,
-    title: "Graduate Student",
+    title: "MS Computer Science candidate",
     organization: "Northeastern University",
-    period: "Present",
-    description:
-      "Pursuing advanced studies in Computer Science with focus on Machine Learning, NLP, and AI Engineering.",
+    period: "2027",
+    description: "",
     color: "from-blue-500 to-cyan-500",
-  },
-  {
-    type: "education",
-    icon: Briefcase,
-    title: "Participant",
-    organization: "Google GEAR Program",
-    period: "Present",
-    description:
-      "Selected for Google's Explore, Aspire, Rise program — a career development and learning initiative for emerging tech talent.",
-    color: "from-red-500 to-orange-500",
-  },
-  {
-    type: "education",
-    icon: Award,
-    title: "Applicant",
-    organization: "GFSD Fellowship",
-    period: "In Review",
-    description:
-      "Applied to the Graduate Fellowships for STEM Development (GFSD), an employer-sponsored fellowship providing research funding and summer internships for graduate STEM students.",
-    color: "from-violet-500 to-purple-600",
-  },
-  {
-    type: "education",
-    icon: Award,
-    title: "Mathematics for Machine Learning Specialization",
-    organization: "Imperial College London",
-    period: "In Progress",
-    description:
-      "Comprehensive 3-course specialization covering the prerequisite mathematics for applications in data science and machine learning. Topics include Linear Algebra, Multivariate Calculus, Probability Theory, and Graph Theory.",
-    color: "from-teal-500 to-blue-500",
-    link: "https://www.coursera.org/specializations/mathematics-machine-learning",
-  },
-  {
-    type: "leadership",
-    icon: Users,
-    title: "Student Advisory Board Member",
-    organization:
-      "Khoury College of Computer Sciences, Northeastern University",
-    period: "Present",
-    description:
-      "Serving on the student advisory board to represent student voices to faculty and leadership. Collaborating on initiatives that improve curriculum, student experience, and community engagement across Khoury.",
-    color: "from-sky-500 to-blue-600",
   },
   {
     type: "leadership",
     icon: Users,
     title: "Miami Chapter Lead",
     organization: "The AI Collective",
-    period: "Present",
-    description:
-      "Leading the Miami chapter of The AI Collective, a non-profit community uniting 100,000+ pioneers exploring the frontier of AI. Organizing events, workshops, and discussions to drive collective progress in AI.",
+    period: "",
+    description: "",
     color: "from-indigo-500 to-purple-500",
     link: "https://www.aicollective.com/",
   },
   {
-    type: "community",
+    type: "leadership",
     icon: Users,
-    title: "Member – SHPE (Region 7)",
-    organization: "Society of Hispanic Professional Engineers",
-    period: "Present",
-    description:
-      "Active member in the Southeast (Region 7), participating in professional development events, workshops, and networking opportunities to empower the Hispanic community in STEM.",
-    color: "from-amber-500 to-orange-600",
-    link: "https://www.shpe.org/",
+    title: "Founding Chapter President",
+    organization: "INIT @ Northeastern",
+    period: "",
+    description: "",
+    color: "from-sky-500 to-blue-600",
   },
   {
-    type: "research",
+    type: "leadership",
+    icon: Users,
+    title: "Graduate Student Advisory Board",
+    organization: "Khoury College",
+    period: "",
+    description: "",
+    color: "from-violet-500 to-purple-600",
+  },
+  {
+    type: "education",
     icon: Award,
-    title: "ML & NLP Researcher",
-    organization: "Independent Research",
-    period: "Present",
-    description:
-      "Independent research in machine learning and natural language processing: robust models, evaluation, and reliable NLP systems.",
-    color: "from-purple-500 to-pink-500",
+    title: "Google GEAR Program participant",
+    organization: "",
+    period: "",
+    description: "",
+    color: "from-red-500 to-orange-500",
   },
   {
-    type: "work",
-    icon: Briefcase,
-    title: "Software Engineer",
-    organization: "Various Projects",
-    period: "Present",
-    description:
-      "Building scalable applications with Django and Flask, deploying solutions on Azure cloud infrastructure, and developing ML-powered solutions. Experienced with Azure services including Azure Functions, Azure DevOps, and Azure Machine Learning.",
-    color: "from-green-500 to-emerald-500",
+    type: "education",
+    icon: GraduationCap,
+    title: "MS Computer Science",
+    organization: "Northeastern University",
+    period: "Expected 2027",
+    description: "",
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    type: "education",
+    icon: GraduationCap,
+    title: "Bachelor of Applied Science, Supply Chain Management",
+    organization: "Broward College",
+    period: "2021",
+    description: "",
+    color: "from-teal-500 to-blue-500",
+  },
+  {
+    type: "education",
+    icon: Award,
+    title: "Google Associate Cloud Engineer",
+    organization: "",
+    period: "2026",
+    description: "",
+    color: "from-amber-500 to-orange-600",
   },
 ];
 
@@ -158,7 +155,7 @@ export default function Experience() {
               <Reveal
                 as="div"
                 delay={index * 0.05}
-                key={exp.title}
+                key={`${exp.title}-${exp.organization}-${exp.period}`}
                 className="experience-item glass-card p-8 rounded-2xl 
                          hover:scale-[1.02] transform transition-all duration-300 group"
               >
@@ -176,29 +173,35 @@ export default function Experience() {
                       <h3 className="text-2xl font-bold text-gradient-2">
                         {exp.title}
                       </h3>
-                      <span className="text-primary-400 font-medium">
-                        {exp.period}
-                      </span>
+                      {exp.period ? (
+                        <span className="text-primary-400 font-medium">
+                          {exp.period}
+                        </span>
+                      ) : null}
                     </div>
 
-                    <p className="text-primary-400 text-lg mb-3">
-                      {exp.link ? (
-                        <a
-                          href={exp.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:underline"
-                        >
-                          {exp.organization}
-                        </a>
-                      ) : (
-                        exp.organization
-                      )}
-                    </p>
+                    {exp.organization ? (
+                      <p className="text-primary-400 text-lg mb-3">
+                        {exp.link ? (
+                          <a
+                            href={exp.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                          >
+                            {exp.organization}
+                          </a>
+                        ) : (
+                          exp.organization
+                        )}
+                      </p>
+                    ) : null}
 
-                    <p className="text-gray-300 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    {exp.description ? (
+                      <p className="text-gray-300 leading-relaxed">
+                        {exp.description}
+                      </p>
+                    ) : null}
                   </div>
                 </div>
               </Reveal>
@@ -209,16 +212,8 @@ export default function Experience() {
         <div className="mt-16 text-center">
           <div className="inline-block glass-card p-6 rounded-xl">
             <p className="text-lg text-gray-300">
-              Open to{" "}
-              <span className="text-primary-400 font-semibold">
-                internships
-              </span>{" "}
-              and
-              <span className="text-primary-400 font-semibold">
-                {" "}
-                opportunities
-              </span>{" "}
-              in Software Engineering, Machine Learning, and AI Engineering
+              Open to ML engineer and research engineer roles in LLM evaluation
+              and post-training. Let&apos;s talk.
             </p>
           </div>
         </div>

@@ -11,34 +11,24 @@ if (typeof window !== 'undefined') {
 
 const skillCategories = [
   {
-    title: 'AI/ML Frameworks',
-    skills: ['TensorFlow', 'PyTorch', 'NumPy', 'pandas', 'scikit-learn', 'Keras'],
+    title: 'ML & NLP',
+    skills: ['Python', 'PyTorch', 'scikit-learn', 'NumPy', 'pandas', 'Hugging Face', 'LangChain', 'RAG', 'LLM Evaluation'],
     color: 'from-purple-500 to-pink-500',
   },
   {
-    title: 'Languages',
-    skills: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'Bash'],
-    color: 'from-blue-500 to-cyan-500',
+    title: 'Infrastructure',
+    skills: ['Docker', 'Terraform', 'Google Cloud (Cloud Run)', 'Azure AI Foundry', 'AWS (ECS, RDS)', 'PostgreSQL', 'LanceDB', 'ChromaDB', 'Git', 'GitHub Actions'],
+    color: 'from-orange-500 to-red-500',
   },
   {
-    title: 'Tools & Others',
-    skills: ['Git', 'GitHub Actions', 'Jira', 'Notion', 'Postman', 'Vim', 'VS Code'],
-    color: 'from-indigo-500 to-purple-500',
-  },
-  {
-    title: 'Mathematics & Theory',
-    skills: ['Linear Algebra', 'Multivariate Calculus', 'Probability Theory', 'Graph Theory'],
+    title: 'Mathematics',
+    skills: ['Linear Algebra', 'Probability', 'Optimization'],
     color: 'from-teal-500 to-blue-500',
   },
   {
-    title: 'Frontend',
-    skills: ['React', 'Next.js', 'Tailwind CSS', 'Material UI', 'Figma'],
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
-    title: 'Backend & Cloud',
-    skills: ['Node.js', 'Django', 'Flask', 'AWS', 'Azure', 'Docker', 'Firebase', 'PostgreSQL', 'MySQL', 'Redis'],
-    color: 'from-orange-500 to-red-500',
+    title: 'Languages',
+    skills: ['English', 'Spanish (fluent)'],
+    color: 'from-blue-500 to-cyan-500',
   },
 ]
 
@@ -126,4 +116,3 @@ export default function Skills() {
     </section>
   )
 }
-

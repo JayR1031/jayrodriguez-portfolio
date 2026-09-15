@@ -13,51 +13,42 @@ if (typeof window !== "undefined") {
 
 const projects = [
   {
-    title: "Multi-PDF RAG System",
+    title: "Puente AI — Trade-Compliance RAG (deployed)",
     description:
-      "Privacy-preserving document intelligence system that lets users query across multiple PDFs without sending data to external APIs. Built with local LLM inference, vector embeddings, and retrieval-augmented generation.",
-    tech: ["Python", "RAG", "LLMs", "Vector Search", "Privacy"],
-    github: "https://github.com/JayR1031/multi-pdf-rag",
+      "Deployed retrieval-augmented generation system answering trade-compliance questions for the US–Latin America corridor. Live testbed for cross-lingual LLM compliance evaluation.",
+    tech: ["Python", "RAG", "LanceDB", "Google Cloud Run", "LLM Evaluation"],
+    link: "https://puenteai.ai",
     color: "from-cyan-500 to-blue-600",
   },
   {
-    title: "Merit Flow",
+    title: "diGenius AI — Enterprise AI Platform",
     description:
-      "IBM Hackathon project — AI-powered workflow automation system built with IBM Watson Orchestrate. Designed to streamline merit-based processes using agentic AI orchestration.",
-    tech: ["Python", "IBM Watson Orchestrate", "Agentic AI", "Hackathon"],
-    github: "https://github.com/JayR1031/merit-flow",
-    color: "from-slate-500 to-blue-500",
-  },
-  {
-    title: "Cloud Infrastructure Docker",
-    description:
-      "Docker containerization and cloud infrastructure deployment project. Focus on scalable microservices architecture.",
-    tech: ["Docker", "AWS", "Microservices", "DevOps"],
-    github: "https://github.com/JayR1031/cloud-infrastructure-docker",
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    title: "Search Algorithms AI",
-    description:
-      "Implementation of A* and DFS search algorithms for pathfinding and graph traversal. AI course project.",
-    tech: ["Python", "AI", "Algorithms", "Pathfinding"],
-    github: "https://github.com/JayR1031/search-algorithms-ai",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    title: "Character N-gram Language Model",
-    description:
-      "Character-based N-gram Language Model trained on Kaggle Job Descriptions 2025 dataset. CS5100 Homework 1.",
-    tech: ["Python", "NLP", "Machine Learning", "N-grams"],
-    github: "https://github.com/JayR1031/character-ngram-language-model",
+      "Zero-to-one enterprise AI monorepo (Portal, Buying, Brain, Cash Recon) with RAG pipelines over 3,000+ corporate records on LangChain and Azure AI Foundry; 500+ automated deployments; CI/CD security gates with Trivy and Gitleaks.",
+    tech: ["Python", "TypeScript", "LangChain", "Azure AI Foundry", "CI/CD"],
     color: "from-green-500 to-emerald-500",
+  },
+  {
+    title: "PrivaSense MD — Privacy-First Medical Assistant",
+    description:
+      "Led frontend and cloud architecture on a 3-person team: Next.js UI, FastAPI backend, and VaultGemma (differentially private LLM) inference on ECS Fargate across 2 AZs, with PHI masking before inference, encrypted RDS PostgreSQL, Cognito auth, and Terraform-managed infrastructure.",
+    tech: ["Next.js", "FastAPI", "AWS", "Terraform", "Differential Privacy"],
+    link: "https://github.com/CloudComputingMIA2025/team_awj",
+    color: "from-teal-500 to-blue-500",
+  },
+  {
+    title: "Multi-PDF RAG System",
+    description:
+      "Privacy-preserving document intelligence system that lets users query across multiple PDFs without sending data to external APIs. Built with local LLM inference, vector embeddings, and retrieval-augmented generation.",
+    tech: ["Python", "RAG", "LangChain", "ChromaDB", "Local LLM"],
+    link: "https://github.com/JayR1031/multi-pdf-rag",
+    color: "from-cyan-500 to-blue-600",
   },
   {
     title: "Reinforcement Language Model",
     description:
       "Character n-gram language model with reinforcement learning from human feedback.",
     tech: ["Python", "RLHF", "Reinforcement Learning", "NLP"],
-    github: "https://github.com/JayR1031/reinforcement-language-model",
+    link: "https://github.com/JayR1031/reinforcement-language-model",
     color: "from-orange-500 to-red-500",
   },
   {
@@ -65,18 +56,8 @@ const projects = [
     description:
       "Bayesian Network & Hidden Markov Model implementation for customer intent classification and text denoising.",
     tech: ["Python", "Bayesian Networks", "HMM", "NLP"],
-    github:
-      "https://github.com/JayR1031/graphical-models-intent-classification",
+    link: "https://github.com/JayR1031/graphical-models-intent-classification",
     color: "from-indigo-500 to-purple-500",
-  },
-  {
-    title: "Supervised Learning Age & Gender Prediction",
-    description:
-      "Supervised learning model for age and gender prediction using machine learning techniques.",
-    tech: ["Python", "Machine Learning", "Computer Vision", "Classification"],
-    github:
-      "https://github.com/JayR1031/supervised-learning-age-gender-prediction",
-    color: "from-pink-500 to-rose-500",
   },
 ];
 
@@ -159,36 +140,38 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 glass-effect rounded-lg 
+                {project.link ? (
+                  <div className="flex gap-4">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 glass-effect rounded-lg 
                              hover:border-primary-500 border border-transparent 
                              transition-all group/link"
-                  >
-                    <Github
-                      size={18}
-                      className="group-hover/link:text-primary-400"
-                    />
-                    <span className="text-sm">Code</span>
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 glass-effect rounded-lg 
+                    >
+                      <Github
+                        size={18}
+                        className="group-hover/link:text-primary-400"
+                      />
+                      <span className="text-sm">Code</span>
+                    </a>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 glass-effect rounded-lg 
                              hover:border-primary-500 border border-transparent 
                              transition-all group/link"
-                  >
-                    <ExternalLink
-                      size={18}
-                      className="group-hover/link:text-primary-400"
-                    />
-                    <span className="text-sm">View</span>
-                  </a>
-                </div>
+                    >
+                      <ExternalLink
+                        size={18}
+                        className="group-hover/link:text-primary-400"
+                      />
+                      <span className="text-sm">View</span>
+                    </a>
+                  </div>
+                ) : null}
               </Reveal>
             </motion.div>
           ))}
