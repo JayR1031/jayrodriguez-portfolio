@@ -4,7 +4,7 @@ Complete guide to deploy your portfolio to various hosting platforms.
 
 ## 📋 Pre-Deployment Checklist
 
-1. ✅ Make sure your resume PDF is in `public/Graduate Student.pdf`
+1. ✅ Make sure your resume PDF is in `public/Jay_Rodriguez_Resume.pdf`
 2. ✅ Test locally with `npm run build` to ensure no errors
 3. ✅ Commit all changes to Git
 

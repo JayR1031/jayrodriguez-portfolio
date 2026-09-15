@@ -330,7 +330,7 @@ export default function Hero() {
             See My Code
           </motion.a>
           <motion.a
-            href="/Graduate Student.pdf"
+            href="/Jay_Rodriguez_Resume.pdf"
             download="Jay_Rodriguez_Resume.pdf"
             className="px-8 py-4 glass-effect rounded-full font-semibold 
                      hover:scale-105 transform transition-all duration-300 

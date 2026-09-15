@@ -1,8 +1,7 @@
 # Resume File
 
-Place your resume PDF file here with the filename:
-**"Graduate Student.pdf"**
+Place the master resume PDF in this folder as:
 
-The resume download link in the Hero section is configured to use this file.
-Once you place the PDF in this `public` folder, the resume button will work correctly.
+**"Jay_Rodriguez_Resume.pdf"**
 
+The Hero "View Resume" button links to `/Jay_Rodriguez_Resume.pdf`.
